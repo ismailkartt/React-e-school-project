@@ -1,0 +1,35 @@
+@import '../../../styles/variables';
+
+/* Body için varsayılan arkaplan */
+body {
+    background-color: $color4;
+}
+
+/* İçerik alanı */
+.content-area {
+    background-color: white;
+    border-radius: $border-radius;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+    max-width: 600px; /* İçerik alanı genişliği */
+    width: 100%; /* Küçük ekranlarda %100 genişlik */
+}
+
+/* Menü linkleri */
+.menu-links .nav-link {
+    font-weight: 600;
+    font-size: 1.25rem;
+    color: $primary;
+    transition: background-color 0.3s ease;
+}
+
+.menu-links .nav-link:hover {
+    background-color: $navbar-light-hover-color;
+    text-decoration: none;
+}
+
+/* Başlık stili */
+.display-4 {
+    color: $primary;
+    font-weight: 700;
+}

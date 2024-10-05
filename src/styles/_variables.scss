@@ -1,0 +1,37 @@
+// COLOR PALETTES
+$color1: #0061A8;
+$color1-opacity-9: rgba(0, 97, 168, 0.9);
+$color2: #FFA500;
+$color2-opacity-40: rgba(255, 165, 0, 0.4);
+$color3: #343A40;
+$color4: #F8F9FA;
+$color5: #28A745;
+$color-bg-transparent: rgba(0, 97, 168, 0.155);
+
+// Bootstrap
+$primary: $color1; // Ana kurumsal renk
+$secondary: $color2; // Tamamlayıcı canlı renk
+$success: $color5; // Başarı durumları için yeşil
+$info: $color3; // Bilgi için nötr koyu gri
+$warning: $color2; // Uyarılar için turuncu
+$danger: $color1; // Hata durumu için ana kurumsal renk
+$light: $color4; // Arka plan ve hafif tonlar için açık renk
+$dark: $color3; // Nötr koyu renk
+$font-family-sans-serif: "Poppins";
+$navbar-nav-link-padding-x: 1rem;
+$navbar-light-color: $color1;
+$navbar-light-hover-color: $color2;
+$navbar-light-active-color: $color2;
+$nav-link-font-weight: 600;
+
+$navbar-dark-color: $color1;
+$navbar-dark-hover-color: $color2;
+$navbar-dark-active-color: $color2;
+$nav-link-font-weight: 600;
+$border-radius: 0;
+$focus-ring-color: $color2-opacity-40;
+
+
+
+// SweetAlert onay butonu ana renk ile uyumlu
+$swal2-confirm-button-background-color: $color1; 

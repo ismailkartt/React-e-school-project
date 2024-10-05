@@ -1,25 +1,35 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useEffect, useState } from 'react'
+import AppRouter from './router'
+import { useDispatch } from 'react-redux';
+import { getUser } from './api/auth-service';
+import { login, logout } from './store/slices/auth-slice';
+import LoadingSpinner from './component/common/loading-spinner';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+const App = () => {
+  const [loading, setLoading] = useState(true);
 
-export default App;
+  const dispatch = useDispatch();
+
+  const loadData = async () => { 
+    try {
+    const resp = await getUser();
+    dispatch(login(resp));
+    } catch (err) {
+      console.log(err);
+      dispatch(logout());
+    }
+    finally{
+      setLoading(false);
+    }
+   }
+
+   useEffect(() => {
+     loadData();
+     // eslint-disable-next-line
+   }, [])
+   
+
+  return <>{loading ? <LoadingSpinner/> : <AppRouter/>}</>
+};
+   
+export default App

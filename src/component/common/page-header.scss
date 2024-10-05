@@ -1,0 +1,18 @@
+@use "../../styles/variables" as v;
+
+.page-header{
+    background-color: v.$color5;
+    color: v.$color4;
+    text-align: center;
+    padding: 50px 0;
+    font-size: 5rem;
+     
+    h1{
+        font-size: 3rem;
+        font-weight: 700;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+}

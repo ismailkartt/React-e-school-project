@@ -1,0 +1,25 @@
+@use "../../styles/variables" as v;
+
+.user-menu{
+    a{
+        color: v.$color4;
+        text-decoration: none;
+        font-weight: 600;
+    }
+
+    position: absolute;
+    top: 1.25rem;
+    right: 1.25rem;
+    
+    button{
+      font-weight: 600;
+      padding: 0.625rem 1.25rem;
+      border-radius: 4px;
+      -webkit-border-radius: 4px;
+      -moz-border-radius: 4px;
+      -ms-border-radius: 4px;
+      -o-border-radius: 4px;
+}
+
+}
+
