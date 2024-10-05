@@ -1,0 +1,13 @@
+.error-page{
+    .col{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 70vh;
+        img{
+            object-fit: cover;
+            object-position: center;
+            max-width: 50%;
+        }
+    }
+}

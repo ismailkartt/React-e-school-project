@@ -9,6 +9,8 @@ import LessonManagementPage from "../pages/dashboard/lesson-management-page";
 import TeacherManagementPage from "../pages/dashboard/teacher-management-page";
 import StudentManagementPage from "../pages/dashboard/student-management-page";
 import ContactMessagePage from "../pages/dashboard/contact-message-page";
+import Error401Page from "../pages/errors/error-401";
+import Error404Page from "../pages/errors/error-404";
 
 
 const router = createBrowserRouter([
@@ -49,9 +51,17 @@ const router = createBrowserRouter([
                     },
                 ]
             },
+            {
+                path: "unauthorized",
+                element: <Error401Page />,
+            },
+            {
+                path: "*",
+                element: <Error404Page />
+            }
         ]
     },
-]);
+]); 
 
 
 const AppRouter = () => {
